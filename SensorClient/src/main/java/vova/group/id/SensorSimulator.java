@@ -19,7 +19,7 @@ public class SensorSimulator {
         registerSensor(sensorName);
 
         // add 1000 random measurement to server in the temperature range from -100 to 100 degrees
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 100; i++) {
             addMeasurement(generateRandTemp(-100, 100), generateRandomRaining(), sensorName);
         }
 
