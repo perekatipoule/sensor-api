@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import vova.group.id.SensorAPI.models.Measurement;
 import vova.group.id.SensorAPI.models.Sensor;
 import vova.group.id.SensorAPI.repositories.MeasurementsRepository;
-import vova.group.id.SensorAPI.repositories.SensorsRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -16,14 +15,11 @@ import java.util.List;
 public class MeasurementsService {
 
     private final MeasurementsRepository measurementsRepository;
-    private final SensorsRepository sensorsRepository;
     private final SensorsService sensorsService;
 
     @Autowired
-    public MeasurementsService(MeasurementsRepository measurementsRepository, SensorsRepository sensorsRepository,
-                               SensorsService sensorsService) {
+    public MeasurementsService(MeasurementsRepository measurementsRepository, SensorsService sensorsService) {
         this.measurementsRepository = measurementsRepository;
-        this.sensorsRepository = sensorsRepository;
         this.sensorsService = sensorsService;
     }
 
