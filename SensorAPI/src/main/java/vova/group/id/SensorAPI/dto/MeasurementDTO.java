@@ -14,7 +14,7 @@ public class MeasurementDTO {
     @Max(value = 100, message = "Temperature must be less than or equal to 100")
     private Double temperature;
 
-    @NotNull
+    @NotNull(message = "Raining value should not be empty")
     private Boolean raining;
 
     @NotNull(message = "Sensor should not be empty")
