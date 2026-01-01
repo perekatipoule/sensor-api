@@ -26,6 +26,6 @@ public class MeasurementValidator implements Validator {
         Measurement measurement = (Measurement) o;
         // Check for sensor availability
         if (measurement.getSensor() == null || !sensorsService.existByName(measurement.getSensor().getName()))
-            errors.rejectValue("sensor", "Sensor does not exist");
+            errors.rejectValue("sensor", "", "Sensor does not exist");
     }
 }
