@@ -16,7 +16,7 @@ import vova.group.id.SensorAPI.models.Measurement;
 import vova.group.id.SensorAPI.models.Sensor;
 import vova.group.id.SensorAPI.services.MeasurementsService;
 import vova.group.id.SensorAPI.services.SensorsService;
-import vova.group.id.SensorAPI.validators.MeasurementValidatorTest;
+import vova.group.id.SensorAPI.validators.MeasurementValidator;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
@@ -47,7 +47,7 @@ public class MeasurementControllerTest {
     private ObjectMapper objectMapper;
 
     @Autowired
-    private MeasurementValidatorTest measurementValidator;
+    private MeasurementValidator measurementValidator;
 
     private MockMvc mockMvc;
     private Measurement testMeasurement;
